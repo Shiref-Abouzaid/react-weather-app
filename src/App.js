@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import Search from "./components/search/search";
 import "./App.css";
 import CurrentWeather from "./components/current-weather";
+import ForeCast from "./components/forecast";
 import { WATHER_API_UTL, WATHER_API_KEY } from "./api";
 import { useState } from "react";
 
@@ -16,7 +17,7 @@ function App() {
       `${WATHER_API_UTL}/weather?lat=${lat}&lon=${lon}&appid=${WATHER_API_KEY}&units=metric`
     );
     const forcastFetch = fetch(
-      `${WATHER_API_UTL}/forecast?lat=${lat}&lon=${lon}&appid=${WATHER_API_KEY}`
+      `${WATHER_API_UTL}/forecast?lat=${lat}&lon=${lon}&appid=${WATHER_API_KEY}&units=metric`
     );
 
     Promise.all([currentWeatherFeth, forcastFetch])
@@ -32,13 +33,14 @@ function App() {
       });
   };
 
-  console.log(currentWeather);
-  console.log(forcast);
+
+  console.log('forcast >>>>>>>>>>>>>> ',forcast);
 
   return (
     <div className="container">
       <Search onSearchChange={handleOnSearchChange} />
       {currentWeather && <CurrentWeather data={currentWeather} />}
+      {forcast && <ForeCast data={forcast} />}
     </div>
   );
 }
