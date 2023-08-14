@@ -7,10 +7,5 @@ export const geoApiOpstions = {
 	}
 };
 export const GEO_API_URL = 'https://wft-geo-db.p.rapidapi.com/v1/geo';
-// try {
-// 	const response = await fetch(GEO_API_URL + '/adminDivisions', options);
-// 	const result = await response.text();
-// 	console.log(result);
-// } catch (error) {
-// 	console.error(error);
-// }
+export const WATHER_API_UTL = 'https://api.openweathermap.org/data/2.5';
+export const WATHER_API_KEY = 'c0fcf9d84b7e55d44ea67ef8247b50c0'

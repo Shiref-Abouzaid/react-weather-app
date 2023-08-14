@@ -14,6 +14,7 @@ const Search = ({onSearchChange}) => {
         return fetch(`${GEO_API_URL}/adminDivisions?minPopulation=1000000&namePrefix=${inputValue}`, geoApiOpstions)
         .then((response) => response.json())
         .then((response) => {
+            if (!response.data) return;
             return {
                 options:response.data.map((city)=>{
                     return {
