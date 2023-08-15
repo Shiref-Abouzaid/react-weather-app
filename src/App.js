@@ -33,8 +33,6 @@ function App() {
   };
 
 
-  console.log('forcast >>>>>>>>>>>>>> ',forcast);
-
   return (
     <div className="container">
       <Search onSearchChange={handleOnSearchChange} />
