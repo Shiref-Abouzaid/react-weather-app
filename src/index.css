@@ -3,7 +3,6 @@ body {
   font-family: "Roboto", Arial !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #bababa ;
   background-image: url('../public/body-bg.jpg');
   background-size: cover;
 }
