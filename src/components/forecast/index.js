@@ -53,7 +53,7 @@ const ForeCast = (data) => {
             <AccordionItemPanel>
               <div className="daily-details-grid">
                 <div className="daily-details-item">
-                  <label>Humidity</label>
+                  <label>Feels like</label>
                   <label>{Math.round(item.main.feels_like)}&#8451;</label>
                 </div>
                 <div className="daily-details-item">
